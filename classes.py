@@ -119,3 +119,5 @@ warrior = {
     "haste": 1.54,
     "armor penetration": 0.29,
 }
+
+classes = {"Druid", "Priest", "Warrior", "Rogue", "Shaman", "Paladin", "Mage", "Warlock", "Hunter"}
