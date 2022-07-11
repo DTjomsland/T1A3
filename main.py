@@ -1,79 +1,74 @@
-player_class = "druid"
+def _get_player_class():
+    print('Please pick one of the following classes:')
+    print(*list(classes.keys()), sep="\t")
+    player_class = input('Your Class: ').title()
+    while player_class not in list(classes.keys()):
+        player_class = input('Please choose a valid class: ').title()
+    return player_class
+
+def _get_specialization(player_class):
+    print('Please pick one of the following specializations:')
+    print(*list(classes[player_class].keys()), sep="\t")
+    specialization = input('Your specialization: ').title()
+    while specialization not in list(classes[player_class].keys()):
+        specialization = input('Please choose a valid specialization:').title()
+    return specialization
+
+def main_function():
+    player_class = _get_player_class()
+    specialization = _get_specialization(player_class)
+    # item1 = _get_item(player_class, specialization, 1)
+    # item2 = _get_item(player_class, specialization, 2)
+    # item1_calc = _calculate_stats(player_class, specialization, item1)
+    # item2_calc = _calculate_stats(player_class, specialization, item2)
+    # _compare_items(item1_calc, item2_calc)
+
+main_function()  
 
 
-def get_specialization():
-    global specialization
-    if player_class == "druid":
-        specialization = input("Is your specialization balance or feral? ").lower()
-        while specialization != "balance" and specialization != "feral":
-            specialization = input("Please choose between balance or feral: ").lower()
-        return specialization
 
-def get_item1():
-    global specialization
-    global item1
-    print("Please enter stat values for Item 1: ")
-    if specialization == "feral":
-        item1 = {
-            "strength": None,
-            "agility": None,
-            "intellect": None,
-            "stamina": None,
-            "hit": None,
-            "expertise": None,
-            "attack power": None,
-            "crit": None,
-            "haste": None,
-            "armor penetration": None,
+classes = {
+    "Warlock": {
+         "Demonology": {
+            "strength": 2.27,
+            "agility": 3.61,
+            "intellect": 0.38,
+            "stamina": 0.17,
+            "hit": 1.00,
+            "expertise": 3.28,
+            "attack power": 1.00,
+            "crit": 2.54,
+            "haste": 1.53,
+            "armor penetration": 0.47,
+            },
+        },
+    "Druid": {
+        "Feral": {
+            "strength": 2.27,
+            "agility": 3.61,
+            "intellect": 0.38,
+            "stamina": 0.17,
+            "hit": 1.00,
+            "expertise": 3.28,
+            "attack power": 1.00,
+            "crit": 2.54,
+            "haste": 1.53,
+            "armor penetration": 0.47,
+            },
+        "Balance": {
+            "intellect": 2.27,
+            "spirit": 3.61,
+            "spell damage": 0.38,
+            "arcane damage": 0.17,
+            "nature damage": 1.00,
+            "spell hit": 3.28,
+            "spell crit": 1.00,
+            "spell haste": 2.54,
+            "mp5": 1.53,
         }
-        item1["strength"] = int(input("Strength: "))
-        item1["agility"] = int(input("Agility: "))
-        item1["intellect"] = int(input("Intellect: "))
-        item1["stamina"] = int(input("Stamina: "))
-        item1["hit"] = int(input("Hit: "))
-        item1["expertise"] = int(input("Expertise: "))
-        item1["attack power"] = int(input("Attack Power: "))
-        item1["crit"] = int(input("Crit: "))
-        item1["haste"] = int(input("Haste: "))
-        item1["armor penetration"] = int(input("Armor Penetration: "))
-        return item1
+    }
+}
+
+
 
     
-    
-    
-    
-def get_item2():
-    global specialization
-    global item2
-    print("Please enter stat values for Item 2: ")
-    if specialization == "feral":
-        item2 = {
-            "strength": None,
-            "agility": None,
-            "intellect": None,
-            "stamina": None,
-            "hit": None,
-            "expertise": None,
-            "attack power": None,
-            "crit": None,
-            "haste": None,
-            "armor penetration": None,
-        }
-        item2["strength"] = int(input("Strength: "))
-        item2["agility"] = int(input("Agility: "))
-        item2["intellect"] = int(input("Intellect: "))
-        item2["stamina"] = int(input("Stamina: "))
-        item2["hit"] = int(input("Hit: "))
-        item2["expertise"] = int(input("Expertise: "))
-        item2["attack power"] = int(input("Attack Power: "))
-        item2["crit"] = int(input("Crit: "))
-        item2["haste"] = int(input("Haste: "))
-        item2["armor penetration"] = int(input("Armor Penetration: "))
-        return item2
-
-get_specialization()
-get_item1()
-get_item2()
-        
-print(item1)
-print(item2)
