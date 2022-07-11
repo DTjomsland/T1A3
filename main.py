@@ -70,6 +70,7 @@ def main_function():
     player_class = _get_player_class()
     specialization = _get_specialization(player_class)
     item1 = _get_item(player_class, specialization, 1)
+    item2 = _get_item(player_class, specialization, 2)
 
 main_function()  
 
