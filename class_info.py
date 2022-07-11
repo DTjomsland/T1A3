@@ -344,8 +344,8 @@ classes = {
             "armor penetration": 0.36,
         },
     },
-    "Warrior": {
-        "Arms": {
+    "Shaman": {
+        "Elemental": {
             "strength": 0.15,
             "agility": 2.5,
             "intellect": 0.01,
@@ -356,7 +356,7 @@ classes = {
             "haste": 1.58,
             "armor penetration": 0.36,
         },
-        "Fury": {
+        "Enhancement": {
             "strength": 0.15,
             "agility": 2.5,
             "intellect": 0.01,
@@ -367,7 +367,31 @@ classes = {
             "haste": 1.58,
             "armor penetration": 0.36,
         },
-        "Protection": {
+    },
+    "Rogue": {
+        "Subtlety": {
+            "strength": 0.15,
+            "agility": 2.5,
+            "intellect": 0.01,
+            "stamina": 0.17,
+            "hit": 3.57,
+            "attack power": 1.00,
+            "crit": 1.78,
+            "haste": 1.58,
+            "armor penetration": 0.36,
+        },
+        "Combat": {
+            "strength": 0.15,
+            "agility": 2.5,
+            "intellect": 0.01,
+            "stamina": 0.17,
+            "hit": 3.57,
+            "attack power": 1.00,
+            "crit": 1.78,
+            "haste": 1.58,
+            "armor penetration": 0.36,
+        },
+        "Assassination": {
             "strength": 0.15,
             "agility": 2.5,
             "intellect": 0.01,

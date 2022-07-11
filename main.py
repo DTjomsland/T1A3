@@ -1,4 +1,9 @@
 import class_info
+
+from art import *
+
+print(text2art('''Dave's TBC Gear Tool''', font="small"))
+
 def _get_player_class():
     print('Please pick one of the following classes: ')
     print(*list(class_info.classes.keys()), sep="   ")
@@ -39,11 +44,11 @@ def _calculate_stats(player_class, specialization, item):
 
 def _compare_items(item1_calc, item2_calc):
     if sum(item1_calc.values()) > sum(item2_calc.values()):
-        print("Item 1 provides more damage output than Item 2")
+        print("Item 1 provides more output than Item 2")
     if sum(item1_calc.values()) < sum(item2_calc.values()):
-        print("Item 2 provides more damage output than Item 1")
+        print("Item 2 provides more output than Item 1")
     if sum(item1_calc.values()) == sum(item2_calc.values()):
-        print("The two items provide the same damage output")
+        print("The two items provide the same output")
 
 def main_function():
     player_class = _get_player_class()
@@ -59,7 +64,7 @@ def restart():
     if restart == "yes" or restart == "y":
         main_function()
     if restart == "n" or restart == "no":
-        print("Script terminating. Goodbye.")
+        print("Thanks for choosing Dave's Gear Comparison Tool.  Goodbye!")
 
 main_function()  
 restart()
