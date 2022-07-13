@@ -44,8 +44,7 @@ def _get_item(player_class, specialization, number):
             try:
                 item[k] = float(input(str(k).title() + ": "))
             except ValueError:
-                print(
-                    Fore.YELLOW + f'{k.title()} must be a numerical value.' + Style.RESET_ALL)
+                print(Fore.YELLOW + f'{k.title()} must be a numerical value.' + Style.RESET_ALL)
             else:
                 break
     print()
@@ -56,28 +55,29 @@ def _calculate_stats(player_class, specialization, item):
     item_calc = item
     for k, v in item_calc.items():
         if k in class_info.classes[player_class][specialization]:
-            item_calc[k] = v * \
-                class_info.classes[player_class][specialization][k]
+            item_calc[k] = v * class_info.classes[player_class][specialization][k]
     return item_calc
 
 
 def _compare_items(item1_calc, item2_calc):
-    if sum(item1_calc.values()) > sum(item2_calc.values()):
-        print(Fore.GREEN + "Item 1 provides more output than Item 2 \n" + Style.RESET_ALL)
-    if sum(item1_calc.values()) < sum(item2_calc.values()):
-        print(Fore.GREEN + "Item 2 provides more output than Item 1 \n" + Style.RESET_ALL)
-    if sum(item1_calc.values()) == sum(item2_calc.values()):
-        print(Fore.GREEN + "The two items provide the same output \n" + Style.RESET_ALL)
+    item1_output = round(sum(item1_calc.values()), 2)
+    item2_output = round(sum(item2_calc.values()), 2)
+    if item1_output > item2_output:
+        print(Fore.GREEN + f"Item 1({item1_output}) provides more output than Item 2({item2_output}) \n" + Style.RESET_ALL)
+    if item1_output < item2_output:
+        print(Fore.GREEN + f"Item 2({item2_output}) provides more output than Item 1({item1_output}) \n" + Style.RESET_ALL)
+    if item1_output == item2_output:
+        print(Fore.GREEN + f"The two items provide the same output ({item1_output}) \n" + Style.RESET_ALL)
 
 
 def _restart():
-    restart = input(
-        Fore.CYAN + "Would you like to restart this program? (Y/N) \n" + Style.RESET_ALL)
+    restart = input(Fore.CYAN + "Would you like to restart this program? (Y/N) \n" + Style.RESET_ALL)
     print()
     if restart == "yes" or restart == "y":
         main_function()
     if restart == "n" or restart == "no":
-        print(Fore.GREEN + "Thanks for choosing Dave's Gear Comparison Tool.  Goodbye!" + Style.RESET_ALL)
+        print(Fore.MAGENTA + "Thanks for choosing Dave's Gear Comparison Tool.  Goodbye!" + Style.RESET_ALL)
+        print()
 
 
 def main_function():
@@ -89,6 +89,5 @@ def main_function():
     item2_calc = _calculate_stats(player_class, specialization, item2)
     _compare_items(item1_calc, item2_calc)
     _restart()
-
 
 main_function()
