@@ -3,7 +3,7 @@ from colorama import Fore, Back, Style
 from art import *
 
 
-print(Fore.MAGENTA + text2art('''Dave's TBC Gear Tool''',
+print(Fore.MAGENTA + text2art('''Dave's TBC Armor Tool''',
       font="small") + Style.RESET_ALL)
 
 
