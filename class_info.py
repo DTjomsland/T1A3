@@ -9,7 +9,7 @@ classes = {
             "spell crit": 0.84,
             "spell haste": 1.29,
         },
-        "Feral DPS": {
+        "Feral Dps": {
             "strength": 2.266,
             "agility": 3.5,
             "attack power": 1.00,
