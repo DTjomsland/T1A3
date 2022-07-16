@@ -140,12 +140,13 @@ Link: https://trello.com/b/XbyH9zF8/world-of-warcraft-gear-comparison
 ![](/image/trello.PNG)
 ![](/image/trellocard.PNG)
 
-### Help Information
-## Execute Program:
+## Help Information
+### Execute Program:
 1. Open terminal
 2. Navigate to directory containing application
-3. Execute run_app.sh file: Enter `./run_app.sh`
-## Steps to install:
+3. Execute run_app.sh file by entering:  `./run_app.sh`
+
+### Steps to install:
 1. Install Python3 (To check if Python3 is installed, enter ```python3 --version``` into terminal)
     * Installation instructions: https://realpython.com/installing-python/
 2. Install pip3 (To check if pip3 is installed, enter ```pip3 --version``` into terminal)
