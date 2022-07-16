@@ -2,7 +2,7 @@ import class_info
 from colorama import Fore, Back, Style
 from art import *
 
-
+# Stores the user's class in player_class variable
 def _get_player_class():
     print(Fore.CYAN + 'Please choose one of the following classes: \n' + Style.RESET_ALL)
     print(*list(class_info.classes.keys()), sep="   ")
@@ -15,7 +15,7 @@ def _get_player_class():
         print()
     return player_class
 
-
+# Stores the user's specialization in specialization variable
 def _get_specialization(player_class):
     print(Fore.CYAN + 'Please choose one of the following specializations: \n' + Style.RESET_ALL)
     print(*list(class_info.classes[player_class].keys()), sep="   ")
@@ -28,7 +28,7 @@ def _get_specialization(player_class):
         print()
     return specialization
 
-
+# Stores the user's item stats in item variable
 def _get_item(player_class, specialization, number):
     item = {}
     print(Fore.CYAN + f"Please enter stat values for Item {number}: \n" + Style.RESET_ALL)
@@ -45,7 +45,7 @@ def _get_item(player_class, specialization, number):
     print()
     return item
 
-
+# Multiplies the item stats by the weights store in the classes dictionary and returns new dictionary with the values.
 def _calculate_stats(player_class, specialization, item):
     item_calc = item.copy()
     for k, v in item_calc.items():
@@ -53,7 +53,7 @@ def _calculate_stats(player_class, specialization, item):
             item_calc[k] = v * class_info.classes[player_class][specialization][k]
     return item_calc
 
-
+# Finds the sum of each item's dictionary values and compares them.
 def _compare_items(item1_calc, item2_calc):
     item1_output = round(sum(item1_calc.values()), 2)
     item2_output = round(sum(item2_calc.values()), 2)
@@ -67,7 +67,7 @@ def _compare_items(item1_calc, item2_calc):
         print(Fore.GREEN + f"The two items provide the same output ({item1_output}) \n" + Style.RESET_ALL)
         return "equal"
 
-
+g# Gives the user the option to restart the program
 def _restart():
     restart = input(Fore.CYAN + "Would you like to restart this program? (Y/N) \n" + Style.RESET_ALL)
     print()
@@ -77,7 +77,7 @@ def _restart():
         print(Fore.MAGENTA + "Thanks for choosing Dave's TBC Armor Tool.  Goodbye!" + Style.RESET_ALL)
         print()
 
-
+# Main function 
 def main():
     print(Fore.MAGENTA + text2art('''Dave's TBC Armor Tool''', font="small") + Style.RESET_ALL)
     player_class = _get_player_class()
