@@ -1,1 +1,13 @@
-STUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUFFFFFFFFFFFFFF
+Installation Guide:
+
+1. Install Python3 (To check if Python3 is installed, enter 'python3 --version' into terminal)
+    * Installation instructions: https://realpython.com/installing-python/
+
+2. Install pip3 (To check if pip3 is installed, enter 'pip3 --version' into terminal)
+    * Installation instructions: https://pip.pypa.io/en/stable/installation/
+
+3. Install colorama module. (To check for installation, enter 'pip3 list' into terminal)
+    * Installation instructions: Enter 'pip3 install colorama' into terminal.
+
+4. Install art module. (To check for installation, enter 'pip3 list' into terminal)
+    * Installation instructions: Enter 'pip3 install art' into terminal.

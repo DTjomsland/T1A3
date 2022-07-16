@@ -1,5 +1,6 @@
-import class_info 
-from colorama import Fore, Back, Style
+import class_info
+import sys
+from colorama import Fore, Style
 from art import *
 
 # Stores the user's class in player_class variable
@@ -69,13 +70,14 @@ def _compare_items(item1_calc, item2_calc):
 
 # Gives the user the option to restart the program
 def _restart():
-    restart = input(Fore.CYAN + "Would you like to restart this program? (Y/N) \n" + Style.RESET_ALL).lower()
-    print()
-    if restart == "yes" or restart == "y":
-        main()
-    if restart == "n" or restart == "no":
-        print(Fore.MAGENTA + "Thanks for choosing Dave's TBC Armor Tool.  Goodbye!" + Style.RESET_ALL)
+    while True:
+        response = input(Fore.CYAN + "Would you like to restart this program? (Y/N) \n" + Style.RESET_ALL).lower()
         print()
+        if response == "yes" or response == "y":
+            main()
+        if response == "n" or response == "no":
+            print(Fore.MAGENTA + "Thanks for choosing Dave's TBC Armor Tool.  Goodbye! \n" + Style.RESET_ALL)
+            sys.exit()
 
 # Main function 
 def main():

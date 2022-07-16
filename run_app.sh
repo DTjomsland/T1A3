@@ -1,13 +1,4 @@
 #!/bin/bash
-# Checks if the user needs extra help before starting the program
-echo -n "Type 'help' for application instructions or hit enter to continue to app: "
-read var
-if [ $# -eq 0 ] && [ $var == "help" ]; 
-then
-  cat help.txt
-else
-  python3 app.py
-fi
 # Checks to see if python 3 is intalled
 if ! [[ -x "$(command -v python3)" ]];
 then
@@ -31,4 +22,13 @@ then
     This program utilizes the module: art, but it looks like art is not installed.
     Type "pip3 install art" to install module.'
   exit 1
+fi
+# Checks if the user needs extra help before starting the program
+echo -n "Type 'help' for application installation instructions or hit enter to continue to app: "
+read var
+if [ $# -eq 0 ] && [ "$var" == "help" ]; 
+then
+  cat help.txt
+else
+  python3 app.py
 fi
