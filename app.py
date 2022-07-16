@@ -69,7 +69,7 @@ def _compare_items(item1_calc, item2_calc):
 
 # Gives the user the option to restart the program
 def _restart():
-    restart = input(Fore.CYAN + "Would you like to restart this program? (Y/N) \n" + Style.RESET_ALL)
+    restart = input(Fore.CYAN + "Would you like to restart this program? (Y/N) \n" + Style.RESET_ALL).lower()
     print()
     if restart == "yes" or restart == "y":
         main()
