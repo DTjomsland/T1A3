@@ -67,7 +67,7 @@ def _compare_items(item1_calc, item2_calc):
         print(Fore.GREEN + f"The two items provide the same output ({item1_output}) \n" + Style.RESET_ALL)
         return "equal"
 
-g# Gives the user the option to restart the program
+# Gives the user the option to restart the program
 def _restart():
     restart = input(Fore.CYAN + "Would you like to restart this program? (Y/N) \n" + Style.RESET_ALL)
     print()

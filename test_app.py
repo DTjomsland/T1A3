@@ -1,10 +1,11 @@
 import unittest
 import app
 
+#Tests to make sure the user inputs for items are being modified by the _calculate_stats function
 class TestCompareItems(unittest.TestCase):
     def test_item1_calculated(self):
         player_class = "Druid"
-        specialization = "Feral DPS"
+        specialization = "Feral Dps"
         item1 = {
             "strength": 12,
             "agility": 12,
@@ -17,9 +18,10 @@ class TestCompareItems(unittest.TestCase):
         }
         self.assertNotEqual(item1, app._calculate_stats(player_class, specialization, item1))
 
+#Tests to make sure the user inputs for items being compared properly.
     def test_item_comparison(self):
         player_class = "Druid"
-        specialization = "Feral DPS"
+        specialization = "Feral Dps"
         item1 = {
             "strength": 12,
             "agility": 12,
