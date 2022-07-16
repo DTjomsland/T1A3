@@ -1,5 +1,6 @@
 #!/bin/bash
 # Checks to see if python 3 is intalled
+# Exits after error so the user is not overwhelmed with errors all at once.
 if ! [[ -x "$(command -v python3)" ]];
 then
   echo 'Error: 

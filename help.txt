@@ -1,3 +1,8 @@
+Execution Method:
+1. Open terminal
+2. Navigate to directory containing application
+3. Execute run_app.sh file by entering:  "./run_app.sh"
+
 Installation Guide:
 
 1. Install Python3 (To check if Python3 is installed, enter 'python3 --version' into terminal)
@@ -11,3 +16,5 @@ Installation Guide:
 
 4. Install art module. (To check for installation, enter 'pip3 list' into terminal)
     * Installation instructions: Enter 'pip3 install art' into terminal.
+
+If errors occur, please inform us: davesarmortool@gmail.com
