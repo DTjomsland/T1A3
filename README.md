@@ -140,6 +140,11 @@ Link: https://trello.com/b/XbyH9zF8/world-of-warcraft-gear-comparison
 ![](/image/trello.PNG)
 ![](/image/trellocard.PNG)
 
+## Testing:
+*The testing process included both automated and manual testing.*
+
+![](/image/testing.PNG)
+
 ## Help Information
 ### Execute Program:
 1. Open terminal
