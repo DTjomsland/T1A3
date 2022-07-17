@@ -5,7 +5,9 @@ Execution Method:
 
 2. Navigate to directory containing application.
 
-3. Execute run_app.sh file by entering:  "./run_app.sh"
+3. Ensure permission is granted to execute program by entering: "chmod +x run_app.sh"
+
+4. Execute run_app.sh file by entering:  "./run_app.sh"
 
 
 Installation Guide:
