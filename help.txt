@@ -25,3 +25,4 @@ These must be installed for the program to run properly.
     * Installation instructions: Enter 'pip3 install art' into terminal.
 
 If errors occur after steps have been followed, please inform us: davesarmortool@gmail.com
+
